@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Locator</string>
+    <string name="app_name2">Locator2</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="google_maps_key">AIzaSyAW1N7JS8hv8yu8l5T2HgrEN5kOctPrszo</string>
+
+    <string name="map_type_none">None</string>
+    <string name="map_type_normal">Normal</string>
+    <string name="map_type_terrain">Terrain</string>
+    <string name="map_type_satellite">Satellite</string>
+    <string name="map_type_hybrid">Hybrid</string>
+
+    <string name="HostName">Host Name</string>
+    <string name="deviceId">Device ID</string>
+    <string name="register">Register</string>
+
+</resources>

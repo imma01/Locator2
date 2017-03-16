@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="net.pi.locator.StartActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/textColor"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/HostName"
+            android:textColor="@color/textColor"
+            android:textSize="14dp"
+            android:id="@+id/tx1"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx1"
+            android:id="@+id/hostname"
+            android:textColor="@color/textColor"
+            android:hint="imran-iot-labs.azure-devices.net"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/deviceId"
+            android:textColor="@color/textColor"
+            android:textSize="14dp"
+            android:id="@+id/tx2"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@id/hostname"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx2"
+            android:id="@+id/deviceId"
+            android:textColor="@color/textColor"
+            android:hint="MyNewDevice"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            style="?android:textAppearanceSmall"
+            android:textStyle="bold"
+            android:layout_below="@id/deviceId"
+            android:layout_marginTop="35dp"
+            android:id="@+id/register"
+            android:background="@drawable/button_selector"
+            android:textColor="@color/textColor"
+
+            />
+    </RelativeLayout>
+</LinearLayout>
