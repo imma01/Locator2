@@ -34,6 +34,7 @@ public class StartActivity extends AppCompatActivity {
 
         final EditText et = (EditText)findViewById(R.id.deviceId);
         final EditText et1 = (EditText)findViewById(R.id.hostname);
+        final EditText et2 = (EditText)findViewById(R.id.SASid);
         Button deviceId = (Button)findViewById(R.id.register);
 
         deviceId.setOnClickListener(new View.OnClickListener() {
@@ -41,11 +42,13 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String deviceId1 = et.getText().toString();
                 String hostName1 = et1.getText().toString();
+                String SASid = et2.getText().toString();
                 if(!et.getText().toString().isEmpty() && !et1.getText().toString().isEmpty()){
                     SharedPreferences examplePrefs = getSharedPreferences(PREFS, 0);
                     SharedPreferences.Editor editor = examplePrefs.edit();
                     editor.putString("hostName", hostName1);
                     editor.putString("deviceID", deviceId1);
+                    editor.putString("SASiD", SASid);
                     editor.commit();
 
                     Toast.makeText(StartActivity.this, "Saved successfully.", Toast.LENGTH_LONG).show();

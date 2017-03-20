@@ -42,7 +42,7 @@
             android:layout_below="@id/tx1"
             android:id="@+id/hostname"
             android:textColor="@color/textColor"
-            android:hint="imran-iot-labs.azure-devices.net"
+            android:hint="Host name"
             />
 
         <TextView
@@ -62,7 +62,27 @@
             android:layout_below="@id/tx2"
             android:id="@+id/deviceId"
             android:textColor="@color/textColor"
-            android:hint="MyNewDevice"
+            android:hint="Device ID"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAS ID"
+            android:textColor="@color/textColor"
+            android:textSize="14dp"
+            android:id="@+id/tx3"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@id/deviceId"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx3"
+            android:id="@+id/SASid"
+            android:textColor="@color/textColor"
+            android:hint="SAS ID"
             />
 
         <Button
@@ -71,7 +91,7 @@
             android:text="@string/register"
             style="?android:textAppearanceSmall"
             android:textStyle="bold"
-            android:layout_below="@id/deviceId"
+            android:layout_below="@id/SASid"
             android:layout_marginTop="35dp"
             android:id="@+id/register"
             android:background="@drawable/button_selector"

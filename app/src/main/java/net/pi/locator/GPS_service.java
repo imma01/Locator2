@@ -102,15 +102,17 @@ public class GPS_service extends Service {
                 String userDevice = example.getString("deviceID", "Device ID seems to be wrong");
                 String userHostname = example.getString("hostName", "Host Name seems to be wrong");
                 String mobilefNo = example.getString("MobileNo", "Mobile no seems to be wrong");
+                String SASid = example.getString("SASiD", "SAS ID seems to be wrong");
 
                 //MyNewDevice
                 //imran-iot-labs.azure-devices.net
+                //SharedAccessSignature sr=imran-iot-labs.azure-devices.net&sig=KmiOZUA5wJpJXeTKX3PDQxoOZG%2BjT%2BT%2BTLbqU%2BG%2FaMU%3D&se=1519197378&skn=iothubowner
 
                 final RequestBody body = RequestBody.create(mediaType, "{\n\"Longitude\": "+longitude+",\n\"Latitude\": "+latitude+",\n\"Mobile\": "+mobilefNo+",\n\"In/out\": \"In\"\n}");
                 Request request = new Request.Builder()
                         .url("https://"+userHostname+"/devices/"+userDevice+"/messages/events?api-version=2016-02-03")
                         .post(body)
-                        .addHeader("authorization", "SharedAccessSignature sr=imran-iot-labs.azure-devices.net&sig=KmiOZUA5wJpJXeTKX3PDQxoOZG%2BjT%2BT%2BTLbqU%2BG%2FaMU%3D&se=1519197378&skn=iothubowner")
+                        .addHeader("authorization", "SharedAccessSignature sr="+userHostname+"&"+SASid+"&skn=iothubowner")
                         .addHeader("content-type", "application/json")
                         .addHeader("cache-control", "no-cache")
                         .build();
